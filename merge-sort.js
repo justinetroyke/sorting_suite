@@ -1,14 +1,14 @@
-function reorder(array, i, j) {
-  var temp = array[i];
-  array[i] = array[j];
-  array[j] = temp;
+function reorder(array, a, b) {
+  var temp = array[a];
+  array[a] = array[b];
+  array[b] = temp;
 }
 
 function sort(array) {
   for(var length = 0; length < array.length; length++) {
-    for(var j = 1; j < array.length; j++) {
-      if(array[j - 1] > array[j]) {
-        reorder(array, j - 1, j);
+    for(var b = 1; b < array.length; b++) {
+      if(array[b - 1] > array[b]) {
+        reorder(array, b - 1, b);
       }
     }
   }
